@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "ExtensibleMetaclass-Tests",
+	"classinstvars" : [
+		"aMetaInstanceVariable"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"anInstanceVariable"
+	],
+	"name" : "EMSuperTestClass",
+	"type" : "normal"
+}

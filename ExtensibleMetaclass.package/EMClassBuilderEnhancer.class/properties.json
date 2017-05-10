@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "PabloTesone 5/10/2017 12:08",
+	"super" : "ShDefaultBuilderEnhancer",
+	"category" : "ExtensibleMetaclass-ClassBuilderIntegration",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"composition"
+	],
+	"name" : "EMClassBuilderEnhancer",
+	"type" : "normal"
+}

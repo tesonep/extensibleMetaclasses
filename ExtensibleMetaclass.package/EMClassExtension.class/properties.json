@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "PabloTesone 5/10/2017 12:08",
+	"super" : "Metaclass",
+	"category" : "ExtensibleMetaclass-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"composition"
+	],
+	"name" : "EMClassExtension",
+	"type" : "normal"
+}

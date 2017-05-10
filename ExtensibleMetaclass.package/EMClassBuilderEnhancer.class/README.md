@@ -1,0 +1,1 @@
+I integrate the ExtensibleMetaclass with the ShiftClassBuilder / ShiftClassInstaller

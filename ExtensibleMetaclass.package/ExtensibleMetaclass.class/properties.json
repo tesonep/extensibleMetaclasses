@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "PabloTesone 5/10/2017 12:06",
+	"super" : "Object",
+	"category" : "ExtensibleMetaclass",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ExtensibleMetaclass",
+	"type" : "normal"
+}

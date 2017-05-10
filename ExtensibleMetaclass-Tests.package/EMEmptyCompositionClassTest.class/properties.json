@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "EMAbstractTest",
+	"category" : "ExtensibleMetaclass-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "EMEmptyCompositionClassTest",
+	"type" : "normal"
+}

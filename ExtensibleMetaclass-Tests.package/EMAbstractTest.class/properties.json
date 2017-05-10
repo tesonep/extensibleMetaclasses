@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "ExtensibleMetaclass-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"newClass",
+		"enhancer"
+	],
+	"name" : "EMAbstractTest",
+	"type" : "normal"
+}
