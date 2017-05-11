@@ -1,3 +1,0 @@
-accessing
-anSlot
-	^ anSlot

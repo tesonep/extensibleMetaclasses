@@ -1,12 +1,20 @@
 tests
 testSimpleTraitedClass
+	| anObject |
 	newClass := ExtensibleMetaclass
 		newSubclass: #EMASimpleTraitedClass
 		superClass: Object
-		uses: EMSimpleTraitForTest 
+		uses: EMSimpleTraitForTest
 		slots: {}
 		sharedVariables: ''
 		poolDictionaries: ''
 		category: 'ExtensibleMetaclass-Traits-Tests'.
-		
-	self assert: newClass new aMethod equals: 42.
+
+	anObject := newClass new.
+	anObject aSlot: 21.
+
+	self assert: anObject aMethod equals: 42.
+	self assert: anObject aSlot equals: 21.
+	self assert: anObject aMethod equals: 42.
+	self assert: anObject anotherMethod equals: (42*21).
+	

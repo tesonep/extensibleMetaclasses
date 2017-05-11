@@ -1,3 +1,0 @@
-calculating elements
-calculateMethodOperations: originalMethods
-	^ nextPart calculateMethodOperations: originalMethods.

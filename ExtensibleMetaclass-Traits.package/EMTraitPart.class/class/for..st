@@ -1,5 +1,5 @@
 instance creation
 for: aTraitComposition
 	^ self new
-		traitComposition: traitComposition;
+		traitComposition: aTraitComposition;
 		yourself
