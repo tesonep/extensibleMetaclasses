@@ -1,27 +1,26 @@
 tests
-testExtendingExistingClass
-	newClass := Object
-		subclass: #EMSimpleTestClass
+testExtendingEnhancedClass
+	newClass := ExtensibleMetaclass
+		newSubclass: #EMSimpleTestClass
+		superClass: Object
 		slots: #(anInstanceVariable)
-		classVariables: ''
+		classSlots: #(aMetaInstanceVariable)		
+		sharedVariables: ''
 		poolDictionaries: ''
 		category: 'ExtensibleMetaclass-Tests'.
 
-	(Smalltalk at: #EMSimpleTestClass) compile: 'aMethod
+	newClass compile: 'aMethod
 		^ 42.
 	'.
 
-	(Smalltalk at: #EMSimpleTestClass) class compile: 'aClassMethod
+	newClass class compile: 'aClassMethod
 		^ 42.
 	'.
-
-
-	(Smalltalk at: #EMSimpleTestClass) class instanceVariableNames: 'aMetaInstanceVariable'.
 
 	self assert: newClass isNotNil.
-	self deny: newClass class class = EMMetaclass.
-	self should:[newClass instVarNamed: #parts] raise:Error.
-	self should:[newClass class instVarNamed: #parts] raise:Error.
+	self assert: newClass class class = EMMetaclass.
+	newClass instVarNamed: #parts.
+	newClass class instVarNamed: #parts.
 	
 	newClass instVarNamed: #aMetaInstanceVariable.
 	newClass new instVarNamed: #anInstanceVariable.

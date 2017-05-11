@@ -5,7 +5,8 @@ testSimpleTraitedClass
 		newSubclass: #EMASimpleTraitedClass
 		superClass: Object
 		uses: EMSimpleTraitForTest
-		slots: {}
+		slots: #()
+		classSlots: #()
 		sharedVariables: ''
 		poolDictionaries: ''
 		category: 'ExtensibleMetaclass-Traits-Tests'.

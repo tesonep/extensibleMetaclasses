@@ -4,6 +4,7 @@ testCreateEmptySubclass
 		newSubclass: #EMSimpleTestClass
 		superClass: EMSuperTestClass
 		slots: #()
+		classSlots: #()
 		sharedVariables: ''
 		poolDictionaries: ''
 		category: 'ExtensibleMetaclass-Tests'.

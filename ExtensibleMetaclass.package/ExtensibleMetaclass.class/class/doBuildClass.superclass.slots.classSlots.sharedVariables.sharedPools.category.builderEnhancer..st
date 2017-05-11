@@ -1,5 +1,5 @@
 instance creation
-doBuildClass: aSubclassSymbol superclass: aSuperClass slots: slotDefinition sharedVariables: classVarDefinition sharedPools: someSharedPoolNames category: aCategorySymbol builderEnhancer: builderEnhancer
+doBuildClass: aSubclassSymbol superclass: aSuperClass slots: slotDefinition classSlots: classSlots sharedVariables: classVarDefinition sharedPools: someSharedPoolNames category: aCategorySymbol builderEnhancer: builderEnhancer
 	^ ShiftClassInstaller
 		make: [ :builder | 
 			builder
@@ -11,4 +11,4 @@ doBuildClass: aSubclassSymbol superclass: aSuperClass slots: slotDefinition shar
 				sharedVariables: classVarDefinition;
 				sharedPools: someSharedPoolNames;
 				category: aCategorySymbol;
-				copyClassSlotsFromExistingClass ]
+				classSlots: classSlots ]
