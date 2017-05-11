@@ -18,5 +18,5 @@ baseline: spec
 		group: 'traits-tests'		with: #('ExtensibleMetaclass-Traits-Tests');
 
 		group: 'all'					with: #(core traits);
-		group: 'all-tests'			with: #(traits-tests)		
+		group: 'development'		with: #(traits-tests)		
 	]
