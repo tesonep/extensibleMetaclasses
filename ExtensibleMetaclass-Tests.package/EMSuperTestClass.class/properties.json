@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "Object",
-	"category" : "ExtensibleMetaclass-Tests",
+	"category" : "ExtensibleMetaclass-Tests-Tests-Classes",
 	"classinstvars" : [
 		"aMetaInstanceVariable"
 	],

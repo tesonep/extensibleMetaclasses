@@ -10,4 +10,5 @@ newSubclass: aSubclassSymbol superClass: aSuperClass slots: slotDefinition class
 				slots: slotDefinition;
 				sharedVariables: classVarDefinition;
 				sharedPools: someSharedPoolNames;
-				category: aCategorySymbol ]
+				category: aCategorySymbol;
+				copyClassSlotsFromExistingClass ]
