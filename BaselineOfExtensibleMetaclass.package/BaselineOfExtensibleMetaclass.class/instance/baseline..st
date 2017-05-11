@@ -9,7 +9,7 @@ baseline: spec
 		package: 'ExtensibleMetaclass' 					with: [ spec requires: #(AtomicClassInstaller) ];
 		package: 'ExtensibleMetaclass-Tests' 			with: [ spec requires: #(core) ];
 		package: 'ExtensibleMetaclass-Traits' 			with: [ spec requires: #(core) ];
-		package: 'ExtensibleMetaclass-Traits-Tests' 	with: [ spec requires: #(traits core-tests) ];
+		package: 'ExtensibleMetaclass-Traits-Tests' 	with: [ spec requires: #(traits 'core-tests') ];
 
 		group: 'core' 				with: #('ExtensibleMetaclass');
 		group: 'core-tests'		with: #('ExtensibleMetaclass-Tests');
@@ -18,5 +18,5 @@ baseline: spec
 		group: 'traits-tests'		with: #('ExtensibleMetaclass-Traits-Tests');
 
 		group: 'all'					with: #(core traits);
-		group: 'development'		with: #(traits-tests)		
+		group: 'development'		with: #('traits-tests')		
 	]
