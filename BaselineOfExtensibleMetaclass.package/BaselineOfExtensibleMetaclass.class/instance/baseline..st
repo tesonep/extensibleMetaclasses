@@ -4,7 +4,7 @@ baseline: spec
 	spec for: #common do: [ spec
 		baseline: 'AtomicClassInstaller' with: [ spec
 			repository: 'github://tesonep/pharo-AtomicClassInstaller/mc';
-			loads: 'Shift-ClassBuilder' ];
+			loads: 'shift-installer' ];
 
 		package: 'ExtensibleMetaclass' 					with: [ spec requires: #(AtomicClassInstaller) ];
 		package: 'ExtensibleMetaclass-Tests' 			with: [ spec requires: #(core) ];
