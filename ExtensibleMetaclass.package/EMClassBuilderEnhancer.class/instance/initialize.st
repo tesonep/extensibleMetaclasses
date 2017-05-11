@@ -1,4 +1,4 @@
 initialization
 initialize
 	parts := EMEmptyPart new.
-	metaclassParts := EMEmptyPart new.	
+	metaclassParts := EMDefaultMetaclassPart new.	

@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"nextComposition"
+		"nextPart"
 	],
 	"name" : "EMAbstractPart",
 	"type" : "normal"

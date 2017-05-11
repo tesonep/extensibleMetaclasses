@@ -1,0 +1,3 @@
+accessing
+aMethod
+	^ 42

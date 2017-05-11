@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "EMAbstractPart",
+	"category" : "ExtensibleMetaclass-Traits",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"traitComposition"
+	],
+	"name" : "EMTraitPart",
+	"type" : "normal"
+}

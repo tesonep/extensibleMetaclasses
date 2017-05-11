@@ -1,10 +1,7 @@
 accessing
 rebuildMethodDictionary
+	| originalMethods |
 	localSelectors ifNil: [ localSelectors := self localSelectors ].
-	
-	EMClassExtension localSelectors do:[:selector | 
-		(localSelectors includes: selector) ifFalse:[
-			self recompile: selector from: EMClassExtension.
-			self >> selector propertyAt: #classProviding put: EMClassExtension.
-		]
-	].
+	originalMethods := self localMethods collect: [ :e | EMOriginalMethod for: e ].
+
+	(self parts calculateMethodOperations: originalMethods) do: [ :aMethodOperation | aMethodOperation applyOn: self ]

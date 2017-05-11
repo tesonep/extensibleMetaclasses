@@ -33,7 +33,7 @@ testExtendingExistingClass
 		newSubclass: #EMSimpleTestClass
 		superClass: Object
 		slots: #(anInstanceVariable)
-		classVariables: ''
+		sharedVariables: ''
 		poolDictionaries: ''
 		category: 'ExtensibleMetaclass-Tests'.
 

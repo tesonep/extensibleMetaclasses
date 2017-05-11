@@ -1,10 +1,10 @@
 instance creation
-newSubclass: aSubclassSymbol superClass: aSuperClass slots: slotDefinition classVariables: classVarDefinition poolDictionaries: someSharedPoolNames category: aCategorySymbol
+doBuildClass: aSubclassSymbol superclass: aSuperClass slots: slotDefinition sharedVariables: classVarDefinition sharedPools: someSharedPoolNames category: aCategorySymbol builderEnhancer: builderEnhancer
 	^ ShiftClassInstaller
 		make: [ :builder | 
 			builder
 				metaclassClass: EMMetaclass;
-				builderEnhancer: EMClassBuilderEnhancer new;
+				builderEnhancer: builderEnhancer;
 				name: aSubclassSymbol;
 				superclass: aSuperClass;
 				slots: slotDefinition;

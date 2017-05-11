@@ -1,3 +1,3 @@
 initialization
 initialize
-	nextComposition := EMEmptyPart new.
+	nextPart := EMEmptyPart new.

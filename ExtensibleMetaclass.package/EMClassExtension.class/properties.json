@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "PabloTesone 5/10/2017 12:08",
-	"super" : "Metaclass",
+	"super" : "Object",
 	"category" : "ExtensibleMetaclass-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],

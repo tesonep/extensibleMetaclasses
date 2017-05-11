@@ -1,0 +1,3 @@
+instance creation
+defaultBuilderEnhancer
+	^ EMClassBuilderEnhancer new

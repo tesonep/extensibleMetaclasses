@@ -1,0 +1,1 @@
+Represents adding a method, without replacing one if it is in the localMethods.
