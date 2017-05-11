@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"composition"
+		"parts"
 	],
 	"name" : "EMMetaclass",
 	"type" : "normal"

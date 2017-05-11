@@ -1,3 +1,4 @@
 initialization
 initialize
-	composition := EMEmptyComposition new.
+	parts := EMEmptyPart new.
+	metaclassParts := EMEmptyPart new.	

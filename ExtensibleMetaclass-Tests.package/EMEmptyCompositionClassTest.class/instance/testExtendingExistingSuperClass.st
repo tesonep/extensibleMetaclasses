@@ -26,8 +26,8 @@ testExtendingExistingSuperClass
 		category: 'ExtensibleMetaclass-Tests'.
 
 	self assert: newClass isNotNil.
-	self should:[newClass instVarNamed: #composition] raise:Error.
-	self should:[newClass class instVarNamed: #composition] raise:Error.
+	self should:[newClass instVarNamed: #parts] raise:Error.
+	self should:[newClass class instVarNamed: #parts] raise:Error.
 	
 	newClass instVarNamed: #aMetaInstanceVariable.
 	newClass new instVarNamed: #anInstanceVariable.

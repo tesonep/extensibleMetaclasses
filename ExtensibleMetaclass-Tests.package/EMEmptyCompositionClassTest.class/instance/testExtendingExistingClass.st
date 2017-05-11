@@ -39,8 +39,8 @@ testExtendingExistingClass
 
 	self assert: newClass isNotNil.
 	self assert: newClass class class equals: EMMetaclass.
-	newClass instVarNamed: #composition.
-	newClass class instVarNamed: #composition.
+	newClass instVarNamed: #parts.
+	newClass class instVarNamed: #parts.
 
 	newClass instVarNamed: #aMetaInstanceVariable.
 	newClass new instVarNamed: #anInstanceVariable.

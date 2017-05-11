@@ -1,0 +1,4 @@
+accessing
+afterMethodsCompiled: aBuilder
+	aBuilder newMetaclass rebuildMethodDictionary.
+	aBuilder newClass rebuildMethodDictionary

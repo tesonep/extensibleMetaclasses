@@ -1,13 +1,13 @@
 {
 	"commentStamp" : "",
 	"super" : "Object",
-	"category" : "ExtensibleMetaclass-Compositions",
+	"category" : "ExtensibleMetaclass-Parts",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
 		"nextComposition"
 	],
-	"name" : "EMAbstractComposition",
+	"name" : "EMAbstractPart",
 	"type" : "normal"
 }

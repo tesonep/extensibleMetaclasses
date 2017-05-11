@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
 	"super" : "Object",
-	"category" : "ExtensibleMetaclass-Compositions",
+	"category" : "ExtensibleMetaclass-Parts",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "EMEmptyComposition",
+	"name" : "EMEmptyPart",
 	"type" : "normal"
 }

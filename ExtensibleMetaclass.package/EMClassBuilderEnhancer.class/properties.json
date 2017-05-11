@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"composition"
+		"parts",
+		"metaclassParts"
 	],
 	"name" : "EMClassBuilderEnhancer",
 	"type" : "normal"
