@@ -1,3 +1,3 @@
 *ExtensibleMetaclass-Traits
 asEMTraitComposition
-	^ EMTraitElement for: self.
+	^ EMClassElement for: self.

@@ -1,3 +1,3 @@
 compiling methods
 sourceCodeAt: selector
-	^ traitClass sourceCodeAt: selector.
+	^ innerClass sourceCodeAt: selector.

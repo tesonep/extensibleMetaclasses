@@ -1,3 +1,3 @@
 compiling methods
 compiledMethodAt: selector
-	^ traitClass compiledMethodAt: selector.
+	^ innerClass compiledMethodAt: selector.

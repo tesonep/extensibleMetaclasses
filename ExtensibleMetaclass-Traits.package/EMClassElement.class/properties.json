@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"traitClass"
+		"innerClass"
 	],
-	"name" : "EMTraitElement",
+	"name" : "EMClassElement",
 	"type" : "normal"
 }

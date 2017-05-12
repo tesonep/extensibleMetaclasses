@@ -1,3 +1,0 @@
-accessing
-slots
-	^ traitClass allSlots.
