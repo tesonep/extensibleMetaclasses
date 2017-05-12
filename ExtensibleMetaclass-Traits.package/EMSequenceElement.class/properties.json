@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "EMAlgebraElement",
+	"category" : "ExtensibleMetaclass-Traits-Algebra",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"sequence"
+	],
+	"name" : "EMSequenceElement",
+	"type" : "normal"
+}

@@ -1,3 +1,3 @@
 traits
 localMethods
-	self explicitRequirement 
+	self subclassResponsibility  

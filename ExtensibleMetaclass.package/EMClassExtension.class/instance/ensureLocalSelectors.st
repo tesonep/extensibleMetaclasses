@@ -1,3 +1,3 @@
 traits
 ensureLocalSelectors
-	self explicitRequirement 
+	self subclassResponsibility 
