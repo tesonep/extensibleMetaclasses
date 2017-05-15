@@ -3,8 +3,8 @@ applyOn: aClass
 	"I add the method to the class, without modifying the localSelectors.
 	If there is a method with the same selector in the class, I do not do nothing."
 
-	(aClass localSelectors includes: method selector)
+	(aClass localSelectors includes: selector)
 		ifTrue: [ ^ self ].
 
-	aClass recompile: method selector from: contributingPart.
-	aClass >> method selector propertyAt: #contributingPart put: contributingPart.
+	aClass recompile: selector from: contributingPart.
+	aClass >> selector propertyAt: #contributingPart put: contributingPart.

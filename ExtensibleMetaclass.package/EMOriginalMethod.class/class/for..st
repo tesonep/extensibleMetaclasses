@@ -1,5 +1,5 @@
 instance creation
-for: aMethod
+for: aSelector
 	^ self new
-		method: aMethod;
+		selector: aSelector;
 		yourself

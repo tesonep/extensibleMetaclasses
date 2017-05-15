@@ -1,3 +1,3 @@
 arithmetic
 initialize
-	sequence := Set new.
+	sequence := OrderedCollection new.

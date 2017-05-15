@@ -1,3 +1,3 @@
 arithmetic
 + another
-	(EMSequenceElement with:self) + another
+	^ (EMSequenceElement with:self) + another

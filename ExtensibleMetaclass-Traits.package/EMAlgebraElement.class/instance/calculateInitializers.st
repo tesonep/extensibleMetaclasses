@@ -1,0 +1,3 @@
+selectors
+calculateInitializers
+	^ self subclassResponsibility 

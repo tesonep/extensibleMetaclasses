@@ -1,6 +1,9 @@
 calculating elements
 calculateMethodOperations: originalMethods for: aClass
 	| extensionMethods |
-	extensionMethods := traitComposition methods collect: [ :m | EMAddedMethod for: m from: self ].
+	extensionMethods := traitComposition selectors
+		collect: [ :s | EMAddedMethod for: s from: self ].
 
-	^ super calculateMethodOperations: extensionMethods , originalMethods for: aClass
+	^ super
+		calculateMethodOperations: extensionMethods , originalMethods
+		for: aClass

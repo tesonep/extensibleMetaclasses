@@ -1,5 +1,5 @@
 as yet unclassified
-for: aMethod from: aPart
+for: aSelector from: aPart
 	^ self new
-		method: aMethod;
+		selector: aSelector;
 		contributingPart: aPart

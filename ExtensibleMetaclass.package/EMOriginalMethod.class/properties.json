@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"method"
+		"selector"
 	],
 	"name" : "EMOriginalMethod",
 	"type" : "normal"

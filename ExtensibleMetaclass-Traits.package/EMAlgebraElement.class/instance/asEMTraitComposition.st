@@ -1,0 +1,3 @@
+converting
+asEMTraitComposition
+	^ self
