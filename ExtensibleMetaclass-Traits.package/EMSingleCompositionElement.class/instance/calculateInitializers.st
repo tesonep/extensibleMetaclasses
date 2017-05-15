@@ -1,0 +1,3 @@
+selectors
+calculateInitializers
+	^ innerElement calculateInitializers

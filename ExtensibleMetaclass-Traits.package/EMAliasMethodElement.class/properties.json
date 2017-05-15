@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "EMSingleCompositionElement",
+	"category" : "ExtensibleMetaclass-Traits-Algebra",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"oldSelector",
+		"newSelector"
+	],
+	"name" : "EMAliasMethodElement",
+	"type" : "normal"
+}
