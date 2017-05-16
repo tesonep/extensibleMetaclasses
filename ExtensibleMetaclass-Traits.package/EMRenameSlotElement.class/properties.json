@@ -9,6 +9,6 @@
 		"oldName",
 		"newName"
 	],
-	"name" : "EMRenameSlot",
+	"name" : "EMRenameSlotElement",
 	"type" : "normal"
 }

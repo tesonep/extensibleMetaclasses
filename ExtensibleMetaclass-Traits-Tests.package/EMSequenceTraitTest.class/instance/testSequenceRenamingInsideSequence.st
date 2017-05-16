@@ -4,7 +4,7 @@ testSequenceRenamingInsideSequence
 	newClass := ExtensibleMetaclass
 		newSubclass: #EMASimpleTraitedClass
 		superClass: Object
-		uses: (EMRenameSlot on: EMSimpleTraitForTest asEMTraitComposition from: #aSlot to: #xSlot) + EMAnotherTraitForTest asEMTraitComposition 
+		uses: (EMRenameSlotElement on: EMSimpleTraitForTest asEMTraitComposition from: #aSlot to: #xSlot) + EMAnotherTraitForTest asEMTraitComposition 
 		slots: #()
 		classSlots: #()
 		sharedVariables: ''

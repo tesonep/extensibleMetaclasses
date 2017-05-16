@@ -1,10 +1,10 @@
 tests
-testRenameSlot
+testAliasNonRecursiveMethod
 	| anObject |
 	newClass := ExtensibleMetaclass
 		newSubclass: #EMASimpleTraitedClass
 		superClass: Object
-		uses: (EMRenameSlotElement on:EMSimpleTraitForTest asEMTraitComposition from: #aSlot to: #xSlot)
+		uses: (EMDeepAliasMethodElement on: (EMSimpleTraitForTest asEMTraitComposition) replace: #aMethod with: #otherFancyName)
 		slots: #()
 		classSlots: #()
 		sharedVariables: ''
@@ -14,10 +14,6 @@ testRenameSlot
 	anObject := newClass new.
 	anObject aSlot: 21.
 
-	self assert: (newClass hasSlotNamed: #xSlot).
-
-	self assert: anObject aMethod equals: 42.
 	self assert: anObject aSlot equals: 21.
-	self assert: anObject aMethod equals: 42.
+	self assert: (anObject perform:#otherFancyName) equals: 42.
 	self assert: anObject anotherMethod equals: (42*21).
-	

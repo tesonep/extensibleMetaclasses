@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "EMAliasMethodElement",
+	"category" : "ExtensibleMetaclass-Traits-Algebra",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "EMDeepAliasMethodElement",
+	"type" : "normal"
+}
