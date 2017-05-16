@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "EMSingleCompositionElement",
+	"category" : "ExtensibleMetaclass-Traits-Algebra",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"oldName",
+		"newName"
+	],
+	"name" : "EMRenameSlot",
+	"type" : "normal"
+}

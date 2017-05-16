@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "EMAbstractTest",
+	"category" : "ExtensibleMetaclass-Traits-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "EMRenameSlotTest",
+	"type" : "normal"
+}
