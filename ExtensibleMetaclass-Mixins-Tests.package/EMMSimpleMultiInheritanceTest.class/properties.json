@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "EMAbstractTest",
+	"category" : "ExtensibleMetaclass-Mixins-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "EMMSimpleMultiInheritanceTest",
+	"type" : "normal"
+}
