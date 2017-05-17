@@ -1,0 +1,3 @@
+calculating elements
+extensionClass
+	^ EMBetaMetaExtension
