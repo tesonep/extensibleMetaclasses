@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "ExtensibleMetaclass-Operations",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"selector",
+		"source",
+		"contributingPart"
+	],
+	"name" : "EMAddedSyntheticMethod",
+	"type" : "normal"
+}

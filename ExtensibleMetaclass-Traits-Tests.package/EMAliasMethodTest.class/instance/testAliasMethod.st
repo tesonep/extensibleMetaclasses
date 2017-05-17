@@ -17,3 +17,6 @@ testAliasMethod
 	self assert: anObject aSlot equals: 21.
 	self assert: (anObject perform:#otherFancyName) equals: 42.
 	self assert: anObject anotherMethod equals: (42*21).
+	
+	self assertCollection: newClass localSelectors equals: #() asSet.
+	self assertCollection: newClass class localSelectors equals: #() asSet.

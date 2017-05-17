@@ -19,6 +19,10 @@ testExtendingEnhancedClass
 
 	self assert: newClass isNotNil.
 	self assert: newClass class class = EMMetaclass.
+	
+	self assert: (newClass localSelectors includes:#aMethod).
+	self assert: (newClass class localSelectors includes:#aClassMethod).
+	
 	newClass instVarNamed: #parts.
 	newClass class instVarNamed: #parts.
 	
@@ -39,6 +43,10 @@ testExtendingEnhancedClass
 
 	self assert: newClass isNotNil.
 	self assert: newClass class class equals: EMMetaclass.
+
+	self assert: (newClass localSelectors includes:#aMethod).
+	self assert: (newClass class localSelectors includes:#aClassMethod).
+
 	newClass instVarNamed: #parts.
 	newClass class instVarNamed: #parts.
 

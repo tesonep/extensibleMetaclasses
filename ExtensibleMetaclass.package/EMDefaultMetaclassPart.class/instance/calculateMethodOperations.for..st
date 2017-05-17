@@ -5,4 +5,8 @@ calculateMethodOperations: originalMethods for: aClass
 		reject: [ :m | m isAbstract ]
 		thenCollect: [ :m | EMAddedMethod for: m selector from: self ].
 		
+	extensionMethods := extensionMethods , { EMAddedSyntheticMethod selector: #hiddenMethodDict source: 'hiddenMethodDict
+		^ methodDict
+	' from: self}.
+		
 	^ super calculateMethodOperations: extensionMethods , originalMethods for: aClass.

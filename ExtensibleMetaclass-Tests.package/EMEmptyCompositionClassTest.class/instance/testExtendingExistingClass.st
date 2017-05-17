@@ -47,4 +47,7 @@ testExtendingExistingClass
 	newClass new instVarNamed: #anInstanceVariable.
 
 	self assert: newClass aClassMethod equals: 42.
-	self assert: newClass new aMethod equals: 42
+	self assert: newClass new aMethod equals: 42.
+	
+	self assertCollection: newClass localSelectors equals: #(aMethod) asSet.
+	self assertCollection: newClass class localSelectors equals: #(aClassMethod) asSet.

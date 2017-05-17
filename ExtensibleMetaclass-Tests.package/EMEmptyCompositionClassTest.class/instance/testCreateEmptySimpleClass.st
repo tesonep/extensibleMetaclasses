@@ -12,4 +12,7 @@ testCreateEmptySimpleClass
 	self assert: newClass isNotNil.
 	self assert: newClass class class equals: EMMetaclass.
 	self assert: (newClass class hasInstVarNamed: #parts).
-	self assert: (newClass class class hasInstVarNamed: #parts)
+	self assert: (newClass class class hasInstVarNamed: #parts).
+	
+	self assert: newClass methodDict isNotNil.
+	self assert: newClass hiddenMethodDict isNotNil.

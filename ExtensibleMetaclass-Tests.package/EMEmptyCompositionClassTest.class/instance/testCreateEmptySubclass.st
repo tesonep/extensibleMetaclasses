@@ -20,7 +20,7 @@ testCreateEmptySubclass
 	self assert: newClass aClassMethod equals: 42.
 	self assert: newClass new aMethod equals: 42.
 
-	newClass class >> #rebuildMethodDictionary.
+	self assert: (newClass class lookupSelector: #rebuildMethodDictionary) notNil.
 	self deny: (newClass class localSelectors includes: #parts).
 	self deny: (newClass class localSelectors includes: #parts:).
 	self deny: (newClass class localSelectors includes: #rebuildMethodDictionary).

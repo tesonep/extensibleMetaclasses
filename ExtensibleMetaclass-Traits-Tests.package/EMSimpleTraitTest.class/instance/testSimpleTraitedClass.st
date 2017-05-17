@@ -18,4 +18,9 @@ testSimpleTraitedClass
 	self assert: anObject aSlot equals: 21.
 	self assert: anObject aMethod equals: 42.
 	self assert: anObject anotherMethod equals: (42*21).
-	
+
+	self assert: (newClass localSelectors isEmpty).	
+	self assert: (newClass class localSelectors isEmpty).	
+
+	self deny: (newClass localSelectors includes: #aMethod).
+	self deny: (newClass localSelectors includes: #anotherMethod).

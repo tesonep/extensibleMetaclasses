@@ -6,5 +6,5 @@ applyOn: aClass
 	(aClass localSelectors includes: selector)
 		ifTrue: [ ^ self ].
 
-	aClass recompile: selector from: contributingPart.
-	aClass >> selector propertyAt: #contributingPart put: contributingPart.
+	aClass recompileInternal: selector from: contributingPart.
+	(aClass lookupSelector: selector) propertyAt: #contributingPart put: contributingPart.
