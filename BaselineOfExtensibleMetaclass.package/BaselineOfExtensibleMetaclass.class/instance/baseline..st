@@ -10,6 +10,9 @@ baseline: spec
 		package: 'ExtensibleMetaclass-Tests' 			with: [ spec requires: #(core) ];
 		package: 'ExtensibleMetaclass-Traits' 			with: [ spec requires: #(core) ];
 		package: 'ExtensibleMetaclass-Traits-Tests' 	with: [ spec requires: #(traits 'core-tests') ];
+		package: 'ExtensibleMetaclass-Beta' 				with: [ spec requires: #(core) ];
+		package: 'ExtensibleMetaclass-Beta-Tests' 		with: [ spec requires: #(beta 'core-tests') ];
+
 
 		group: 'core' 				with: #('ExtensibleMetaclass');
 		group: 'core-tests'		with: #('ExtensibleMetaclass-Tests');
@@ -17,6 +20,9 @@ baseline: spec
 		group: 'traits'				with: #('ExtensibleMetaclass-Traits');
 		group: 'traits-tests'		with: #('ExtensibleMetaclass-Traits-Tests');
 
-		group: 'all'					with: #(core traits);
-		group: 'development'		with: #('traits-tests')		
+		group: 'beta'				with: #('ExtensibleMetaclass-Beta');
+		group: 'beta-tests'		with: #('ExtensibleMetaclass-Beta-Tests');
+
+		group: 'all'					with: #(core traits beta);
+		group: 'development'		with: #('traits-tests' 'beta-tests')		
 	]
