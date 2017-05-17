@@ -1,5 +1,5 @@
 tests
-testExtendingExistingSuperClass
+testModifyingAClassWithExtendedSubclass
 	newClass2 := Object
 		subclass: #EMSimpleTestClass
 		slots: #(anInstanceVariable)
@@ -18,16 +18,19 @@ testExtendingExistingSuperClass
 	newClass2 class instanceVariableNames: 'aMetaInstanceVariable'.
 	newClass2 instVarNamed: #aMetaInstanceVariable put: 23.
 
-	newClass := newClass2
-		subclass: #EMSimpleTestSubClass
+	newClass := ExtensibleMetaclass
+		newSubclass: #EMSimpleTestSubClass
+		superClass: newClass2
 		slots: #()
-		classVariables: ''
+		classSlots: #()		
+		sharedVariables: ''
 		poolDictionaries: ''
 		category: 'ExtensibleMetaclass-Tests'.
 
+
 	self assert: newClass isNotNil.
-	self should:[newClass instVarNamed: #parts] raise:Error.
-	self should:[newClass class instVarNamed: #parts] raise:Error.
+	newClass instVarNamed: #parts.
+	newClass class instVarNamed: #parts.
 	
 	newClass instVarNamed: #aMetaInstanceVariable.
 	newClass new instVarNamed: #anInstanceVariable.
@@ -37,14 +40,13 @@ testExtendingExistingSuperClass
 	
 	newClass instVarNamed: #aMetaInstanceVariable put: 52.
 
-	newClass2 := ExtensibleMetaclass
-		newSubclass: #EMSimpleTestClass
-		superClass: Object
-		slots: #(anInstanceVariable otherInstanceVariable)
-		classSlots: #(aMetaInstanceVariable)		
-		sharedVariables: ''
+	newClass2 := Object
+		subclass: #EMSimpleTestClass
+		instanceVariableNames: 'anInstanceVariable otherInstanceVariable'
+		classVariableNames: ''
 		poolDictionaries: ''
 		category: 'ExtensibleMetaclass-Tests'.
+
 
 	self assert: newClass isNotNil.
 
@@ -56,4 +58,7 @@ testExtendingExistingSuperClass
 	self assert: newClass aClassMethod equals: 42.
 	self assert: newClass new aMethod equals: 42.
 	self assert: (newClass instVarNamed: #aMetaInstanceVariable) equals: 52.
-	
+
+	self assert: newClass theMetaClass class equals: EMMetaclass.	
+	newClass instVarNamed: #parts.
+	newClass class instVarNamed: #parts.
