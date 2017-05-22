@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "EMSimpleExtensionPart",
+	"super" : "EMAbstractPart",
 	"category" : "ExtensibleMetaclass-Parts",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "EMDefaultMetaclassPart",
+	"name" : "EMSimpleExtensionPart",
 	"type" : "normal"
 }

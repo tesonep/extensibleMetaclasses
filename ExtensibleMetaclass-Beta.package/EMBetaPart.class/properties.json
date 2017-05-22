@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "EMAbstractPart",
+	"super" : "EMSimpleExtensionPart",
 	"category" : "ExtensibleMetaclass-Beta",
 	"classinstvars" : [ ],
 	"pools" : [ ],

@@ -1,15 +1,13 @@
 {
 	"commentStamp" : "",
 	"super" : "Object",
-	"category" : "ExtensibleMetaclass-Parts",
+	"category" : "ExtensibleMetaclass-Mixins",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"nextPart",
-		"referedClass",
-		"referedSuperclass"
+		"superclassLinealization"
 	],
-	"name" : "EMAbstractPart",
+	"name" : "EMMixinMetaExtension",
 	"type" : "normal"
 }

@@ -5,7 +5,11 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"newSuperclass",
+		"newSuperclass2",
+		"newSuperclass3"
+	],
 	"name" : "EMMSimpleMultiInheritanceTest",
 	"type" : "normal"
 }

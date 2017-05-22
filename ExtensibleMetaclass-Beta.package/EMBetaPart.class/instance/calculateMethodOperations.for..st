@@ -1,9 +1,6 @@
 calculating elements
 calculateMethodOperations: originalMethods for: aClass
-	| extensionMethods newOriginals |
-	extensionMethods := self extensionClass localMethods
-		reject: [ :m | m isAbstract ]
-		thenCollect: [ :m | EMAddedMethod for: m selector from: self ].
+	| newOriginals |
 
 	newOriginals := originalMethods
 		collect: [ :m | 
@@ -12,4 +9,4 @@ calculateMethodOperations: originalMethods for: aClass
 				source: (self betaInvocationFor: m selector)
 				from: self ].
 
-	^ super calculateMethodOperations: extensionMethods , newOriginals for: aClass
+	^ super calculateMethodOperations: newOriginals for: aClass

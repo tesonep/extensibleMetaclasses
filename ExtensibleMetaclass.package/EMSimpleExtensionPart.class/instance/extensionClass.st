@@ -1,0 +1,3 @@
+accessing
+extensionClass
+	^ self subclassResponsibility

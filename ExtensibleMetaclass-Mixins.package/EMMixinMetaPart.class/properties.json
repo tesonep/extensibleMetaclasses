@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "Object",
+	"super" : "EMSimpleExtensionPart",
 	"category" : "ExtensibleMetaclass-Mixins",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "EBMixinExtension",
+	"name" : "EMMixinMetaPart",
 	"type" : "normal"
 }
