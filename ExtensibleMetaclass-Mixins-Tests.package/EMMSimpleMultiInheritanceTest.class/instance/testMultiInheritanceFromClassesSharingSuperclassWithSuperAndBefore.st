@@ -91,4 +91,4 @@ testMultiInheritanceFromClassesSharingSuperclassWithSuperAndBefore
 	obj := newClass new.
 
 	self assertCollection: newClass superclassLinealization equals: {newSuperclass2. newSuperclass3. newSuperclass}.
-	self assert: (String streamContents: [ :s | obj aMethod: s]) equals: 'before_newClass before_newSuperclass2 before_newSuperclass3 before_newSuperclass newClass newSuperclass2 newSuperclass3 newSuperclass'.
+	self assert: (String streamContents: [ :s | obj aMethod: s]) equals: 'before_newClass before_newSuperclass2 before_newSuperclass3 before_newSuperclass newClass newSuperclass2 newSuperclass3 newSuperclass '.
