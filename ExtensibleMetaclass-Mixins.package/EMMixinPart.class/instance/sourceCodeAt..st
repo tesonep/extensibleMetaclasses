@@ -1,3 +1,7 @@
 compiling methods
 sourceCodeAt: aSelector
-	^ (self compiledMethodAt: aSelector) sourceCode
+	| aMethod |
+	aMethod := self compiledMethodAt: aSelector.
+	^ aMethod selector = aSelector
+		ifTrue: [ aMethod sourceCode ]
+		ifFalse: [ aMethod getSourceReplacingSelectorWith: aSelector ]

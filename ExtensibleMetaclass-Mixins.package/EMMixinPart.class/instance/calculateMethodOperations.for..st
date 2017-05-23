@@ -1,13 +1,10 @@
 calculating elements
 calculateMethodOperations: originalMethods for: aClass
 	| extensionMethods linealizedMethods |
-		
-	extensionMethods := EMMixinExtension localMethods
-		reject: [ :m | m isAbstract ]
-		thenCollect: [ :m | EMAddedMethod for: m selector from: self ].
+	extensionMethods := EMMixinExtension localMethods reject: [ :m | m isAbstract ] thenCollect: [ :m | EMAddedMethod for: m selector from: self ].
 
 	aClass superclassLinealization: self superclassLinealization.
 
-	linealizedMethods := self allSelectorsInLinealization collect:[:e | EMAddedMethod for: e from: self ].
+	linealizedMethods := (self allSelectorsInLinealizationWith: originalMethods) flatCollect: [ :e | self addedMethodsForSelector: e withOriginals: originalMethods ].
 
-	^ super calculateMethodOperations: linealizedMethods, extensionMethods , originalMethods for: aClass
+	^ super calculateMethodOperations: linealizedMethods , extensionMethods for: aClass

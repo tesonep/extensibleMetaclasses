@@ -1,5 +1,5 @@
 tests
-testMultiInheritanceFromClassesSharingSuperclass
+testMultiInheritanceFromClassesSharingSuperclassWithSuper
 	| obj |
 	newSuperclass := ExtensibleMetaclass
 		newSubclass: #EMASimpleSuperClass
@@ -35,7 +35,7 @@ testMultiInheritanceFromClassesSharingSuperclass
 	'.
 
 	newSuperclass2 compile: 'anotherMethod: aValue
-		^ aValue + 42
+		^ (self nextMethodWithArgs: {aValue}) + 42
 	'.
 
 	newSuperclass3 compile: 'anotherMethod: aValue
@@ -52,14 +52,8 @@ testMultiInheritanceFromClassesSharingSuperclass
 		poolDictionaries: ''
 		category: 'ExtensibleMetaclass-Mixins-Tests'.
 
-	newClass compile: 'somethingElse
-		^ true
-	'.
-
-
 	obj := newClass new.
 
 	self assertCollection: newClass superclassLinealization equals: {newSuperclass2. newSuperclass3. newSuperclass}.
 	self assert: (obj perform: #aMethod) equals: 42.
-	self assert: (obj perform: #anotherMethod: withArguments: {12}) equals: 54.
-	self assert: obj somethingElse.
+	self assert: (obj perform: #anotherMethod: withArguments: {12}) equals: (12+52+42).

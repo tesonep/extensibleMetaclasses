@@ -1,5 +1,5 @@
 tests
-testMultiInheritanceFromClassesSharingSuperclass
+testMultiInheritanceFromClassesSharingSuperclassWithSuperWithoutAfterOrBefore
 	| obj |
 	newSuperclass := ExtensibleMetaclass
 		newSubclass: #EMASimpleSuperClass
@@ -30,16 +30,22 @@ testMultiInheritanceFromClassesSharingSuperclass
 		category: 'ExtensibleMetaclass-Mixins-Tests'.
 
 		
-	newSuperclass compile: 'aMethod
-		^42
+	newSuperclass compile: 'aMethod: aStream
+		aStream nextPutAll: ''newSuperclass''.
+		aStream nextPut: Character space.
+		self nextMethodWithArgs: { aStream }.
 	'.
 
-	newSuperclass2 compile: 'anotherMethod: aValue
-		^ aValue + 42
+	newSuperclass2 compile: 'aMethod: aStream
+		aStream nextPutAll: ''newSuperclass2''.
+		aStream nextPut: Character space.
+		self nextMethodWithArgs: { aStream }.
 	'.
 
-	newSuperclass3 compile: 'anotherMethod: aValue
-		^ aValue + 52
+	newSuperclass3 compile: 'aMethod: aStream
+		aStream nextPutAll: ''newSuperclass3''.
+		aStream nextPut: Character space.
+		self nextMethodWithArgs: { aStream }.
 	'.
 
 
@@ -52,14 +58,14 @@ testMultiInheritanceFromClassesSharingSuperclass
 		poolDictionaries: ''
 		category: 'ExtensibleMetaclass-Mixins-Tests'.
 
-	newClass compile: 'somethingElse
-		^ true
+	newClass compile: 'aMethod: aStream
+		aStream nextPutAll: ''newClass''.
+		aStream nextPut: Character space.
+		self nextMethodWithArgs: { aStream }.
 	'.
 
 
 	obj := newClass new.
 
 	self assertCollection: newClass superclassLinealization equals: {newSuperclass2. newSuperclass3. newSuperclass}.
-	self assert: (obj perform: #aMethod) equals: 42.
-	self assert: (obj perform: #anotherMethod: withArguments: {12}) equals: 54.
-	self assert: obj somethingElse.
+	self assert: (String streamContents: [ :s | obj aMethod: s]) equals: 'newClass newSuperclass2 newSuperclass3 newSuperclass '.

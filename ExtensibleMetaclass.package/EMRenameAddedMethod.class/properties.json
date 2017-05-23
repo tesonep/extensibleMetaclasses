@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "ExtensibleMetaclass-Operations",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"newSelector",
+		"addedMethod"
+	],
+	"name" : "EMRenameAddedMethod",
+	"type" : "normal"
+}
