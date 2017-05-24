@@ -1,16 +1,12 @@
 *ExtensibleMetaclass-Traits
 newSubclass: aSubclassSymbol superClass: aSuperClass uses: aTraitComposition slots: slotDefinition classSlots: classSlots sharedVariables: sharedVarDefinition poolDictionaries: someSharedPoolNames category: aCategorySymbol
-	| builderEnhancer |
-	builderEnhancer := self defaultBuilderEnhancer.
-	builderEnhancer
-		appendPart: (EMTraitPart for: aTraitComposition asEMTraitComposition).
-
 	^ self
-		doBuildClass: aSubclassSymbol
-		superclass: aSuperClass
+		newSubclass: aSubclassSymbol
+		superClass: aSuperClass
+		uses: aTraitComposition
+		usesClassTrait: EMEmptyElement new 
 		slots: slotDefinition
 		classSlots: classSlots
 		sharedVariables: sharedVarDefinition
-		sharedPools: someSharedPoolNames
+		poolDictionaries: someSharedPoolNames
 		category: aCategorySymbol
-		builderEnhancer: builderEnhancer

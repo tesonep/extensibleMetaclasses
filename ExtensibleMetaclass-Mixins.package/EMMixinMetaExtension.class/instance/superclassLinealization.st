@@ -1,3 +1,3 @@
 accessing
 superclassLinealization
-	^ superclassLinealization
+	^ superclassLinealization ifNil: [ ^ {self baseClass superclass} ]

@@ -10,6 +10,5 @@ recompileInternal: selector from: oldClass
 				failBlock: [^ self];
 				compiledMethodTrailer: method trailer;
 				compile.   "Assume OK after proceed from SyntaxError"
-	selector == newMethod selector ifFalse: [self error: 'selector changed!'].
 
 	self basicAddSelectorInternal: selector withMethod: newMethod.

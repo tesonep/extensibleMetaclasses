@@ -1,3 +1,3 @@
 testing
 hasMethod: aSelector
-	^ (innerClass allSelectorsBelow: Object) includes: aSelector.
+	^ self selectors includes: aSelector.

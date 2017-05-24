@@ -1,10 +1,5 @@
 accessing
 selectors
-	| coll |
-	coll := IdentitySet new.
-	innerClass
-		withAllSuperclassesDo: [ :aClass | 
-			aClass = Object
-				ifTrue: [ ^ coll ]
-				ifFalse: [ coll addAll: aClass exposedSelectors ] ].
-	^ coll
+	^ innerClass isMeta
+		ifTrue: [ innerClass allSelectorsBelow: Object class ]
+		ifFalse: [ innerClass allSelectorsBelow: Object ]
