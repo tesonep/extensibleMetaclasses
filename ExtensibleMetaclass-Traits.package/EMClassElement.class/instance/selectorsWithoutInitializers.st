@@ -1,3 +1,3 @@
 selectors
 selectorsWithoutInitializers
-	^ innerClass localSelectors reject:[:e | e = #initializeTrait].
+	^ self selectors reject:[:e | e = #initializeTrait].

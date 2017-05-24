@@ -1,0 +1,3 @@
+*ExtensibleMetaclass
+exposedSelectors
+	^ self selectors

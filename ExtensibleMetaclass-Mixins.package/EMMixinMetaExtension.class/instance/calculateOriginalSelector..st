@@ -1,4 +1,4 @@
-as yet unclassified
+calculating selectors
 calculateOriginalSelector: aSelector
 	| parts originalSelector |
 	parts := aSelector splitOn: '___'.

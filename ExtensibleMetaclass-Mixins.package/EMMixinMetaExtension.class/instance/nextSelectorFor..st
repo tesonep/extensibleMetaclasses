@@ -1,4 +1,4 @@
-as yet unclassified
+calculating selectors
 nextSelectorFor: aSelector
 	| allSelectors index |
 	allSelectors := self allSelectorsFor: aSelector.
