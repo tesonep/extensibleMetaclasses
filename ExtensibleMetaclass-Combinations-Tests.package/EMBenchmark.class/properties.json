@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "EMAbstractTest",
+	"category" : "ExtensibleMetaclass-Combinations-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"newSuperclass",
+		"newSuperclass2",
+		"newSuperclass3"
+	],
+	"name" : "EMBenchmark",
+	"type" : "normal"
+}
