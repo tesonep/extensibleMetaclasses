@@ -12,6 +12,13 @@ baseline: spec
 					version: #stable;
 					repository: 'http://smalltalkhub.com/mc/StefanMarr/SMark/main' ];
 
+		project: 'NeoCSV' with: [
+				spec
+					className: #ConfigurationOfNeoCSV;
+					version: #stable;
+					repository: 'http://mc.stfx.eu/Neo' ];
+
+
 		package: 'ExtensibleMetaclass' 					with: [ spec requires: #(AtomicClassInstaller) ];
 		package: 'ExtensibleMetaclass-Tests' 			with: [ spec requires: #(core) ];
 		package: 'ExtensibleMetaclass-Traits' 			with: [ spec requires: #(core) ];
