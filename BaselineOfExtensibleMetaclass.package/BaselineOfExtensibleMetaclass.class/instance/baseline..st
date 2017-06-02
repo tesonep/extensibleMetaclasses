@@ -27,7 +27,7 @@ baseline: spec
 		package: 'ExtensibleMetaclass-Beta-Tests' 		with: [ spec requires: #(beta 'core-tests') ];
 		package: 'ExtensibleMetaclass-Mixins'			with: [ spec requires: #(core) ];
 		package: 'ExtensibleMetaclass-Mixins-Tests'		with: [ spec requires: #(mixins 'core-tests') ];
-		package: 'ExtensibleMetaclass-Combinations-Tests'		with: [ spec requires: #(all 'core-tests') ];
+		package: 'ExtensibleMetaclass-Combinations-Tests'		with: [ spec requires: #(all 'core-tests' SMark NeoCSV) ];
 
 
 		group: 'core' 				with: #('ExtensibleMetaclass');
