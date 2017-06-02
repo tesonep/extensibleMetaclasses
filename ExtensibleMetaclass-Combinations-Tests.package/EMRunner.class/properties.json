@@ -1,17 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "SMarkSuite",
+	"super" : "SMarkCogRunner",
 	"category" : "ExtensibleMetaclass-Combinations-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"newClass",
-		"newClass2",
-		"newSuperclass",
-		"newSuperclass2",
-		"newSuperclass3"
-	],
-	"name" : "EMBenchmark",
+	"instvars" : [ ],
+	"name" : "EMRunner",
 	"type" : "normal"
 }

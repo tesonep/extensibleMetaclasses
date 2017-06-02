@@ -6,6 +6,12 @@ baseline: spec
 			repository: 'github://tesonep/pharo-AtomicClassInstaller/mc';
 			loads: 'shift-installer' ];
 
+		project: 'SMark' with: [
+				spec
+					className: #ConfigurationOfSMark;
+					version: #stable;
+					repository: 'http://smalltalkhub.com/mc/StefanMarr/SMark/main' ];
+
 		package: 'ExtensibleMetaclass' 					with: [ spec requires: #(AtomicClassInstaller) ];
 		package: 'ExtensibleMetaclass-Tests' 			with: [ spec requires: #(core) ];
 		package: 'ExtensibleMetaclass-Traits' 			with: [ spec requires: #(core) ];

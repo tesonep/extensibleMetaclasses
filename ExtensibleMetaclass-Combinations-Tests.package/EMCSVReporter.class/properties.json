@@ -1,14 +1,14 @@
 {
 	"commentStamp" : "",
 	"super" : "Object",
-	"category" : "ExtensibleMetaclass-Mixins",
+	"category" : "ExtensibleMetaclass-Combinations-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"superclassLinealization",
-		"selectorsCache"
+		"runner",
+		"csvStream"
 	],
-	"name" : "EMMixinMetaExtension",
+	"name" : "EMCSVReporter",
 	"type" : "normal"
 }

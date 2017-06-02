@@ -1,0 +1,3 @@
+compiling methods
+afterMethodRebuild: targetClass
+	nextPart afterMethodRebuild: targetClass
