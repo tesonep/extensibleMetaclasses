@@ -5,6 +5,6 @@ calculateMethodOperations: originalMethods for: aClass
 
 	aClass superclassLinealization: self superclassLinealization.
 
-	linealizedMethods := (self allSelectorsInLinealizationWith: originalMethods) flatCollect: [ :e | self addedMethodsForSelector: e withOriginals: originalMethods ].
+	linealizedMethods := (self allSelectorsInLinealizationWith: originalMethods) flatCollect: [ :e | self rewriteNextMethodCall:(self addedMethodsForSelector: e withOriginals: originalMethods) ].
 
 	^ super calculateMethodOperations: linealizedMethods , extensionMethods for: aClass
