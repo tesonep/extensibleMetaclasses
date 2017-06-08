@@ -1,7 +1,9 @@
 reporting
 report
 	| benchmarks iterations results matcher |
-	benchmarks := runner results keys asOrderedCollection.
+	benchmarks := runner results keys asOrderedCollection sort.
+	filter ifNotNil:[ benchmarks := benchmarks select:filter].
+	
 	iterations := runner iterations.
 	matcher := '([A-Z]([a-z]*))' asRegex.
 

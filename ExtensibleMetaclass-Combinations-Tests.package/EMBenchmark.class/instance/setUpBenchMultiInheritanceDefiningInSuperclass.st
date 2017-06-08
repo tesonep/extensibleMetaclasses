@@ -21,3 +21,5 @@ setUpBenchMultiInheritanceDefiningInSuperclass
 		sharedVariables: ''
 		poolDictionaries: ''
 		category: 'ExtensibleMetaclass-Tests'.
+
+	obj := newClass new

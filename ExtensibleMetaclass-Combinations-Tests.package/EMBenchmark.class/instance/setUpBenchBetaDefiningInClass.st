@@ -21,4 +21,6 @@ setUpBenchBetaDefiningInClass
 		compile:
 			'aMethod: aValue
 		^ 42 + aValue
-	'
+	'.
+	
+	obj := newClass new.

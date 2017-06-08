@@ -1,21 +1,45 @@
 defaults
 runBenchmarks
-	| running100 running500 running1000 running10000 ws |
+	| running100 running500 ws normalValue |
 	running100 := nil.
 	running500 := nil.
 
-	running1000 := nil.
-	running10000 := nil.
+	running100 := self run: 100.
 
-	[ running100 := EMBenchmark run: 100 ] timeToRun.
-	[ running500 := EMBenchmark run: 500 ] timeToRun.	"0:00:01:05.708"
+	GTExampleOrganizer stop.
+	Process allInstances
+		select: [ :e | e name = 'GTExampleOrganizer >> #resetStubs' ]
+		thenDo: #terminate.
 
-	[ running1000 := EMBenchmark run: 1000 ] timeToRun.
-	[ running10000 := EMBenchmark run: 10000 ] timeToRun.
+	EpMonitor current disable.
+	running100 := EMBenchmark run: 100.
+	EpMonitor current enable.
+
+	EpMonitor current disable.
+	running500 := EMBenchmark run: 500.
+	EpMonitor current enable.
 
 
-	ws := (FileLocator home / 'tmp' / 'output.csv') writeStream.
-	EMCSVReporter reportFor: running100 on: ws.
+	ws := (FileLocator home / 'tmp' / 'output1.csv') writeStream.
+	ws truncate.
+	EMCSVReporter
+		reportFor: running100
+		on: ws
+		withFilter: [ :e | 
+			#(SingleInheritanceDefiningInClass BetaDefiningInSuperclass TraitsDefiningInClass MultiInheritanceDefiningInClass)
+				includes: e ].
 	ws close.
 
-	String streamContents: [ :s | EMCSVReporter reportFor: running100 on: s ]
+	ws := (FileLocator home / 'tmp' / 'output2.csv') writeStream.
+	ws truncate.
+	EMCSVReporter
+		reportFor: running100
+		on: ws
+		withFilter: [ :e | 
+			#(MultiInheritanceDefiningInBothWithNextMethod SingleInheritanceDefiningInBothWithSuper BetaDefiningInBoth)
+				includes: e ].
+	ws close.
+
+
+	(normalValue := ((running100 results at: #SingleInheritanceDefiningInClass)
+		collect: [ :e | (e criteria at: 'total') totalTime ]) average) asFloat

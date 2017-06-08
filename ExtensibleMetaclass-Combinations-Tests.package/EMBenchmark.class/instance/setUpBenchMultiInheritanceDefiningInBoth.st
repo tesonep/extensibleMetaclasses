@@ -1,6 +1,5 @@
 initialization
 setUpBenchMultiInheritanceDefiningInBoth
-		
 	newSuperclass := Object
 		subclass: #EMTraitTestClass
 		slots: #(anInstanceVariable)
@@ -28,3 +27,5 @@ setUpBenchMultiInheritanceDefiningInBoth
 			'aMethod: aValue
 		^ 22 + aValue
 	'.
+
+	obj := newClass new

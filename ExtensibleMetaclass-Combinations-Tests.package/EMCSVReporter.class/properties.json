@@ -7,7 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"runner",
-		"csvStream"
+		"csvStream",
+		"filter"
 	],
 	"name" : "EMCSVReporter",
 	"type" : "normal"

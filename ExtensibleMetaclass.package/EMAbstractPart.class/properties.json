@@ -8,7 +8,8 @@
 	"instvars" : [
 		"nextPart",
 		"referedClass",
-		"referedSuperclass"
+		"referedSuperclass",
+		"isMetaPart"
 	],
 	"name" : "EMAbstractPart",
 	"type" : "normal"

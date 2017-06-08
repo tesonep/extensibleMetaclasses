@@ -21,5 +21,5 @@ doRewriteNextMethodCall: aMethod parentName: parentName
 		replace: 'self nextMethodWithArgs: ``@args' with: rewriteString;
 		executeTree: parseTree;
 		tree) formattedCode.
-
+		
 	^ EMAddedSyntheticMethod selector: aMethod selector source: newSource from: aMethod contributingPart

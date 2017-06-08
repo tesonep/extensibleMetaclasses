@@ -10,7 +10,8 @@
 		"newClass2",
 		"newSuperclass",
 		"newSuperclass2",
-		"newSuperclass3"
+		"newSuperclass3",
+		"obj"
 	],
 	"name" : "EMBenchmark",
 	"type" : "normal"

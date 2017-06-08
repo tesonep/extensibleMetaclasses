@@ -1,0 +1,3 @@
+accessing
+beMetaPart
+	isMetaPart := true

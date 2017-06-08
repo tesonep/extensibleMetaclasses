@@ -25,3 +25,5 @@ setUpBenchSingleInheritanceDefiningInBothWithSuper
 			'aMethod: aValue
 		^ 22 + (super aMethod: aValue)
 	'.
+	
+	obj := newClass new.
